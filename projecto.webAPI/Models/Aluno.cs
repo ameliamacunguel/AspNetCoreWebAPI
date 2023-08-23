@@ -9,25 +9,44 @@ namespace projecto.webAPI.Models
     public class Aluno
     {
       public Aluno(){}
-        public Aluno(int id, string nome, string sobrenome, string telefone) 
+
+        public Aluno(int id, 
+                     int matricula,
+                     string nome,
+                     string sobrenome, 
+                     string telefone,
+                     DateTime dataNasc) 
         {
             this.Id = id;
-            this.Nome = telefone;
+            this.Matricula = matricula;
+            this.Nome = nome;
             this.Sobrenome = sobrenome;
             this.Telefone = telefone;
+            this.DataNasc = dataNasc;
    
         }
-      public int Id { get; set; }  
-      public string Nome { get; set; }
-      public string Sobrenome { get; set; }
+      
+       
+        public int Id { get; set; } 
 
-      public string Telefone { get; set; }
+        public int Matricula { get; set; }
 
-        public IEnumerable<AlunoDisciplina> AlunoDisciplinas { get; set; }
+        public string Nome { get; set; }
 
-        internal static object FirstOrDefault(Func<object, bool> value)
-        {
-            throw new NotImplementedException();
-        }
+        public string Sobrenome { get; set; }
+
+        public string Telefone { get; set; }
+
+        public DateTime DataNasc { get; set; }
+
+        public DateTime DataIni { get; set; } = DateTime.Now;
+
+        public DateTime? DataFim { get; set; } = null;
+        
+        public bool Ativo { get; set; } = true;
+
+
+        public IEnumerable<AlunoDisciplina> AlunosDisciplinas { get; set; }
+
     }
 }
