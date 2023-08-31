@@ -65,7 +65,7 @@ namespace projecto.webAPI.Controllers
 
             var alunos = _repo.GetAllAlunos(true);
 
-             return Ok(new AlunoRegistrarDto());
+             return Ok(new AlunoRegistrarDto());/*registar novo aluno na base de dados*/
 
         }
          

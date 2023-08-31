@@ -24,8 +24,11 @@ namespace projecto.webAPI.Helpers
                 );
 
                 // mapeamento 
-            CreateMap<AlunoDto, Aluno>(); /*adicionado um aluno na base de dados*/
+            CreateMap<AlunoDto, Aluno>(); /*adicionado aluno na base de dados*/
             CreateMap<Aluno, AlunoRegistrarDto>().ReverseMap();
+
+            CreateMap<ProfessorDto, Professor>();/*adicionando professor na base de dados*/
+            CreateMap<Professor, ProfessorRegistarDto>().ReverseMap();
         }    
     }
 }
