@@ -15,7 +15,7 @@ export class DirectivasAtributosComponent implements OnInit {
   public list:Array<{nome:string}> = [];
 
   constructor(){}
-  
+
   ngOnInit(): void {
    setInterval(()=>{
     if(this.valor)
@@ -30,6 +30,10 @@ export class DirectivasAtributosComponent implements OnInit {
     }else{
       this.heightPx= "20px";
     }
-   },2000);   
+   },2000);
+  }
+  public salvar(){
+    this.list.push({nome: this.nome});
+    this.nome = "";
   }
 }
