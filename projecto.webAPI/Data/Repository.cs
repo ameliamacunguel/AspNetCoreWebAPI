@@ -43,7 +43,7 @@ namespace projecto.webAPI.Data
         {
             IQueryable<Aluno> query = _context.Alunos;
             
-            //if (inclui) TUDO
+            
 
             query = query.AsNoTracking().OrderBy(a => a.Id);
 
@@ -54,7 +54,7 @@ namespace projecto.webAPI.Data
         {
             IQueryable<Aluno> query = _context.Alunos;
             
-            //if (inclui) TUDO
+            
             query = query.AsNoTracking()
                          .OrderBy(a => a.Id)
                          .Where(aluno => aluno.AlunosDisciplinas.Any(ad => ad.DisciplinaId == disciplinaId));
@@ -76,7 +76,7 @@ namespace projecto.webAPI.Data
         {
             IQueryable<Professor> query = _context.Professores;
             
-            //if (inclui) TUDO
+            
             query = query.AsNoTracking()
             .OrderBy(p => p.Id);
 
@@ -87,7 +87,7 @@ namespace projecto.webAPI.Data
         {
             IQueryable<Professor> query = _context.Professores;
             
-            //if (inclui) TUDO
+            
             query = query.AsNoTracking()
                          .OrderBy(p => p.Id)
                          .Where(p => p.Disciplinas.Any(ad => ad.Id == disciplinaId));

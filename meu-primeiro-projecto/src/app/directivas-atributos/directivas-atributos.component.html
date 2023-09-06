@@ -1,0 +1,9 @@
+<p [ngClass]="{'active': valor, 'disaled': !valor}">NgClass</p>
+<p [ngStyle]="{'height': heightPx, 'background': backgroundColor}">ngStyle</p>
+
+<hr>
+
+<input [(ngModel)]="nome">
+<button (click)="salvar()">Salvar</button>
+
+<li *ngFor="let item of list">{{item.nome}}</li>

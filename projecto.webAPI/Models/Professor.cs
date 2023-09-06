@@ -32,7 +32,7 @@ namespace projecto.webAPI.Models
 
         public string Sobrenome { get; set; }
 
-        //public string Telefone { get; set; }
+        // public string Telefone { get; set; }
 
         public DateTime DataIni { get; set; } = DateTime.Now;
 

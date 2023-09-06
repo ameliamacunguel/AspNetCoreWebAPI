@@ -13,6 +13,8 @@ namespace projecto.webAPI.Data
 {
     public class ProjectoContext : DbContext
     {
+        private const string V = "33334444";
+
         public ProjectoContext(DbContextOptions<ProjectoContext>options): base(options){}
 
         public DbSet<Aluno> Alunos { get; set; }
@@ -35,11 +37,11 @@ namespace projecto.webAPI.Data
             // nao é necessario criar, para evitar conflito ao atualizar a migrations
             // builder.Entity<AlunoDisciplina>()
             // .HasKey(AD => new {AD.AlunoId, AD.DisciplinaId});
-        
+
             // builder.Entity<AlunoCurso>()
             // .HasKey(AD => new {AD.AlunoId, AD.CursoId});
 
-            builder.Entity<Professor>()
+            _ = builder.Entity<Professor>()
             .HasData(new List<Professor>(){
                 new Professor(1, 1, "Lauro", "Oliveira"),
                 new Professor(2, 2,  "Roberto", "Soares"),
@@ -90,22 +92,22 @@ namespace projecto.webAPI.Data
                 new AlunoDisciplina(){Id=5, AlunoId = 2, DisciplinaId = 2,},
                 new AlunoDisciplina(){Id=6, AlunoId = 2, DisciplinaId = 2,},
                 new AlunoDisciplina(){Id=7, AlunoId = 3, DisciplinaId = 3,},
-                //  new AlunoDisciplina(){Id=1, AlunoId = 3, DisciplinaId = 3,},
-                // new AlunoDisciplina(){Id=1, AlunoId = 3, DisciplinaId = 3,},
-                // new AlunoDisciplina(){Id=1, AlunoId = 4, DisciplinaId = 4,},
-                // new AlunoDisciplina(){Id=1, AlunoId = 4, DisciplinaId = 4,},
-                // new AlunoDiciplina(){Id=1, AlunoId = 4, DisciplinaId = 4,},
-                // new AlunoDisciplina(){Id=1, AlunoId = 5, DisciplinaId = 5,},
-                // new AlunoDisciplina(){Id=1, AlunoId = 5, DisciplinaId = 5,},
-                // new AlunoDisciplina(){Id=1, AlunoId = 6, DisciplinaId = 6,},
-                // new AlunoDisciplina(){Id=1, AlunoId = 6, DisciplinaId = 6,},
-                // new AlunoDisciplina(){Id=1, AlunoId = 6, DisciplinaId = 6,},
-                // new AlunoDisciplina(){Id=1, AlunoId = 6, DisciplinaId = 6,},
-                // new AlunoDisciplina(){Id=1, AlunoId = 7, DisciplinaId = 7,},
-                // new AlunoDisciplina(){Id=1, AlunoId = 7, DisciplinaId = 7,},
-                // new AlunoDisciplina(){Id=1, AlunoId = 7, DisciplinaId = 7,},
-                // new AlunoDisciplina(){Id=1, AlunoId = 7, DisciplinaId = 7,},
-                // new AlunoDisciplina(){Id=1, AlunoId = 7, DisciplinaId = 7,}
+                 new AlunoDisciplina(){Id=8, AlunoId = 3, DisciplinaId = 3,},
+                new AlunoDisciplina(){Id=9, AlunoId = 3, DisciplinaId = 3,},
+                new AlunoDisciplina(){Id=10, AlunoId = 4, DisciplinaId = 4,},
+                new AlunoDisciplina(){Id=11, AlunoId = 4, DisciplinaId = 4,},
+                new AlunoDisciplina(){Id=12, AlunoId = 4, DisciplinaId = 4,},
+                new AlunoDisciplina(){Id=13, AlunoId = 5, DisciplinaId = 5,},
+                new AlunoDisciplina(){Id=14, AlunoId = 5, DisciplinaId = 5,},
+                new AlunoDisciplina(){Id=15, AlunoId = 6, DisciplinaId = 6,},
+                new AlunoDisciplina(){Id=16, AlunoId = 6, DisciplinaId = 6,},
+                new AlunoDisciplina(){Id=17, AlunoId = 6, DisciplinaId = 6,},
+                new AlunoDisciplina(){Id=18, AlunoId = 6, DisciplinaId = 6,},
+                new AlunoDisciplina(){Id=19, AlunoId = 7, DisciplinaId = 7,},
+                new AlunoDisciplina(){Id=20, AlunoId = 7, DisciplinaId = 7,},
+                new AlunoDisciplina(){Id=21, AlunoId = 7, DisciplinaId = 7,},
+                new AlunoDisciplina(){Id=22, AlunoId = 7, DisciplinaId = 7,},
+                new AlunoDisciplina(){Id=23, AlunoId = 7, DisciplinaId = 7,}
             });
 
             builder.Entity<AlunoTeste>()
