@@ -12,8 +12,9 @@ export class DirectivasAtributosComponent implements OnInit {
   public backgroundColor: string= "red";
 
   public nome: string = "";
-  public list:Array<{nome:string}> = [];
+  public list:Array<{nome:string}> = [{nome:"Dener Troquatte" }];
 
+  public date: Date = new Date();
   constructor(){}
 
   ngOnInit(): void {

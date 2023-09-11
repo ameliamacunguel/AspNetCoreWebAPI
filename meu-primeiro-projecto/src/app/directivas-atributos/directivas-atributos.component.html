@@ -1,5 +1,9 @@
+<!--<ng-content select="h1"></ng-content>
+
+<div>
 <p [ngClass]="{'active': valor, 'disaled': !valor}">NgClass</p>
 <p [ngStyle]="{'height': heightPx, 'background': backgroundColor}">ngStyle</p>
+</div>
 
 <hr>
 
@@ -7,3 +11,28 @@
 <button (click)="salvar()">Salvar</button>
 
 <li *ngFor="let item of list">{{item.nome}}</li>
+
+<hr>
+
+
+<ng-template ngFor let-item [ngForOf]="list"> //ng-template inteira
+  <p>
+    {{item.nome}}
+  </p>
+</ng-template>
+
+<input [(ngModel)]="nome">
+<button (click)="salvar()">Salvar</button>
+
+
+<ng-content select="h3"></ng-content>
+-->
+
+<!--
+<input [(ngModel)]="nome">
+<button (click)="salvar()">Salvar</button>
+//pipe tem varias funcionalidades
+<li *ngFor="let item of list">{{item.nome | uppercase }}</li>
+-->
+
+{{date | date: 'ddMMyyyy'}}

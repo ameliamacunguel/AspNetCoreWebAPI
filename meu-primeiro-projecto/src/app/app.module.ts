@@ -10,6 +10,8 @@ import { TitleComponent } from './title/title.component';
 import { DataBidingComponent } from './data-biding/data-biding.component';
 import { DirectivasEstruturaisComponent } from './directivas-estruturais/directivas-estruturais.component';
 import { DirectivasAtributosComponent } from './directivas-atributos/directivas-atributos.component';
+import { SharedModule } from './shared/shared.module';
+
 
 
 @NgModule({
@@ -20,13 +22,15 @@ import { DirectivasAtributosComponent } from './directivas-atributos/directivas-
     DataBidingComponent,
     DirectivasEstruturaisComponent,
     DirectivasAtributosComponent,
+    
   ],
 
   imports: [
     CommonModule,
     AppRoutingModule,
     BrowserModule,
-    FormsModule
+    FormsModule,
+    SharedModule
 
   ],
 
